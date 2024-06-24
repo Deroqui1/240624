@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Evento</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Adicionar Evento</h1>
+    <form action="/events/create" method="post">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" required><br>
+        
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" required><br>
+        
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required></textarea><br>
+        
+        <button type="submit">Adicionar</button>
+    </form>
+</body>
+</html>

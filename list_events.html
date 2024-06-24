@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Eventos</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Lista de Eventos</h1>
+    <a href="/events/create">Adicionar Novo Evento</a>
+    <ul>
+        {% for event in events %}
+            <li>
+                <h2>{{ event.title }}</h2>
+                <p>{{ event.date }}</p>
+                <p>{{ event.description }}</p>
+                <a href="/events/edit/{{ event.id }}">Editar</a>
+                <a href="/events/delete/{{ event.id }}" onclick="return confirm('Tem certeza que deseja deletar este evento?');">Deletar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Evento</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Editar Evento</h1>
+    <form action="/events/edit/{{ event.id }}" method="post">
+        <label for="title">Título:</label>
+        <input type="text" id="title" name="title" value="{{ event.title }}" required><br>
+        
+        <label for="date">Data:</label>
+        <input type="date" id="date" name="date" value="{{ event.date }}" required><br>
+        
+        <label for="description">Descrição:</label>
+        <textarea id="description" name="description" required>{{ event.description }}</textarea><br>
+        
+        <button type="submit">Salvar</button>
+    </form>
+</body>
+</html>
